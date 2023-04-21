@@ -18,20 +18,57 @@ Please follow the official documentation to setup your Raspberry Pi for the firs
 https://www.raspberrypi.com/documentation/computers/getting-started.html
 
 
-### VNC Server Installation
+## Extra: *Enabling VNC Server*
+To connect to the raspberry with VNC we need to do the following on the raspberry
+
+1. Open the terminal on your Raspberry Pi.
+
+![image](https://user-images.githubusercontent.com/73581033/233642978-a48b093b-4780-49df-a8e0-f0390561ef1a.png)
+
+2. Enter the following command: `ifconfig`.
+
+![image](https://user-images.githubusercontent.com/73581033/233646960-9385a763-d7eb-4111-8fe9-9ca0c1bad839.png)
+
+3. Now look for the internal ip of the Raspberry Pi and write this down.
+
+![image](https://user-images.githubusercontent.com/73581033/233647266-4c88a4c8-48be-4dcd-85ab-02b4f2f7a9da.png)
+
+4. Now enter the following command into the terminal: `sudo raspi-config`
+
+5. Navigate to interface options.
+6. Select VNC and **click** on yes, this turns the VNC on for your Raspberry Pi.
+7. Make sure to click on **Finish** afterwards
+
+![image](https://user-images.githubusercontent.com/73581033/233648151-7c2b81fb-e7c3-40e8-b1b8-b0cf46c7c688.png)
+
+
+## VNC Server Installation
 Download VNC Server from this link:
 https://www.realvnc.com/en/connect/download/viewer/
 
-Create an account and install it on the dekstop you wanna use to access the Raspberry Pi
+Create an account and install it on the dekstop you wanna use to access the Raspberry Pi.
 
---hoe het eruit ziet met een image
+This is what it would look like minus the connected address obviously.
 
-
-### Extra: *Connecting to VNC Server*
---hier komt de uitleg over het VNC aanzetten op de raspberry met screenshots.
+![image](https://user-images.githubusercontent.com/73581033/233645514-7e0bda71-9a5e-4772-803b-f2fb6a9e5eea.png)
 
 
-### Ifttt Installation
+## Connect with VNC
+1. Open VNC Viewer.
+2. Enter the ip address that you have written down previously in the address bar and **click Enter**
+
+![image](https://user-images.githubusercontent.com/73581033/233649099-4ed36e56-85b5-4d67-b671-a5ea794e4abc.png)
+
+3. Enter your Raspberry Pi user credentials.
+
+![image](https://user-images.githubusercontent.com/73581033/233649382-4978248e-2f40-4a9d-aff2-4a44366b2639.png)
+
+4. Done
+
+![image](https://user-images.githubusercontent.com/73581033/233650088-3b3623c1-4b1d-493f-97e9-83110c58bf39.png)
+
+
+## Ifttt Installation
 Go to: https://ifttt.com/explore and create an account. Once you created an account click on *My Applets*. This is where you can view your created applets. At the moment none have been created so it should be empty. Lets create the applets that we will need for the program to work.
 
 We will need the following Applets:
@@ -83,6 +120,7 @@ This will show up.
 ![image](https://user-images.githubusercontent.com/73581033/233635437-0772b6d9-ddec-45b0-9a55-6b893fb3f9d2.png)
 
 12. Now do the same for Wrong Humidity.
+
 *Hint: on step 4. use the name **wrong_humidity***.
 
 
@@ -129,6 +167,23 @@ while True:
 Save this to your location of preference and give it a proper name.
 
 ## Running the code
+
+Open the terminal on your Raspberry Pi.
+
+![image](https://user-images.githubusercontent.com/73581033/233642978-a48b093b-4780-49df-a8e0-f0390561ef1a.png)
+
+And use the following commandline with your corresponding path.
+
+*Example:*
+`python3 /home/lucas/Desktop/temp_sense.py`
+
+*Confirmation that the code is running*
+
+![image](https://user-images.githubusercontent.com/73581033/233643859-d2facfe6-a619-4c17-8689-16af5c0e3b57.png)
+
+And since the humidity was not optimal I got a notification on my phone.
+
+![image](https://user-images.githubusercontent.com/73581033/233644976-c87c8ca5-c953-4343-a0af-0a005b678265.png)
 
 
 # Features
