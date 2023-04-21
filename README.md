@@ -48,7 +48,7 @@ https://www.realvnc.com/en/connect/download/viewer/
 
 Create an account and install it on the dekstop you wanna use to access the Raspberry Pi.
 
-This is what it would look like minus the connected address obviously.
+*This is what it would look like minus the connected address obviously.*
 
 ![image](https://user-images.githubusercontent.com/73581033/233645514-7e0bda71-9a5e-4772-803b-f2fb6a9e5eea.png)
 
